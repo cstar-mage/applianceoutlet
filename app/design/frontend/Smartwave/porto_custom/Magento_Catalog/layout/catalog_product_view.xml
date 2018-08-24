@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info">
+            <block class="Magento\Cms\Block\Block" name="product.info.warranty.info">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">extended_warranty_info</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <move element="alert.urls" destination="product.info.price" after="product.price.final"/>
+        <move element="product.info.warranty.info" destination="product.info.form.options" before="product.info.options.wrapper.bottom" />
+    </body>
+</page>
